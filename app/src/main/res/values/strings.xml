@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">GuessingGame</string>
     <string name="start">Start</string>
-    <string name="Directions">Choose a number between 1 and 100 or you will never see your family again you have five chances click start to begin">Choose a number between 1 and 100 or you will never see your family again. You have five chances, click start to begin.</string>
+    <string name="Directions">Choose a number between 1 and 100 or you will never see your family again you have five chances click start to begin."</string>
 </resources>

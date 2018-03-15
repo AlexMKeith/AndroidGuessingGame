@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void startGame() {
         Intent playGame = new Intent(this,GameActivity.class);
+//        playGame.putExtra("SETWHICHVIEW",3);
         startActivity(playGame);
     }
 }

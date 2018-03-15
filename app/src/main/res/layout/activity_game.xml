@@ -7,7 +7,7 @@
     tools:context="com.example.alexkeith.guessinggame.GameActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/guess_edittext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="232dp"
@@ -16,6 +16,7 @@
         android:ems="10"
         android:hint="1-100"
         android:inputType="number"
+        android:maxLength="3"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/submit_guess_button"
@@ -47,11 +48,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Higher"
+        android:textAlignment="center"
         android:textSize="30sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="@+id/editText" />
+        app:layout_constraintBottom_toTopOf="@+id/guess_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/guess_edittext"
+        app:layout_constraintStart_toStartOf="@+id/guess_edittext" />
 
     <Button
         android:id="@+id/submit_guess_button"

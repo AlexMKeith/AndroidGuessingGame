@@ -1,5 +1,6 @@
 package com.example.alexkeith.guessinggame;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +33,9 @@ public class GameActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         generatedNumber = (int) Math.ceil(Math.random() * 100 );
+        numberOfGuesses = 0;
+        clueTextview.setVisibility(View.INVISIBLE);
+        guess.setText("");
     }
 
     private void setListener() {
@@ -53,9 +57,13 @@ public class GameActivity extends AppCompatActivity {
 
     private void checkGuess(int userGuess) {
         if (userGuess == generatedNumber) {
-            //TODO - Create intent to go to winning activity - handle winning
+            Intent winner = new Intent(this, ResultsActivity.class);
+            startActivity(winner);
         } else if (numberOfGuesses == MAX_GUESS_COUNT) {
             //TODO - Create intent to go to winning activity - handle out of chances
+            Intent loser = new Intent(this, ResultsActivity.class);
+            loser.putExtra("WINNING_NUMBER", generatedNumber);
+            startActivity(loser);
         } else if (userGuess < generatedNumber) {
             clueTextview.setText(R.string.higher);
             clueTextview.setVisibility(View.VISIBLE);
